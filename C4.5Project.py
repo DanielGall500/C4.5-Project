@@ -24,6 +24,23 @@ clf.fit(x_train, y_train)
 
 predictions = clf.predict(x_test)
 
+for pred,true in zip(predictions, y_test.values):
+
+    if pred == 2:
+        print 'P = Benign'
+    elif pred == 4:
+        print 'P = Malignant'
+
+    if true == [2]:
+        print 'T = Benign'
+        print ''
+    elif true == [4]:
+        print 'T = Malignant'
+        print ''
+
+
+
+
 print 'Accuracy Score', accuracy_score(y_test, predictions)
 
 
