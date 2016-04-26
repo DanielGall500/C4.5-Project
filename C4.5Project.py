@@ -16,7 +16,7 @@ target = ['class']
 data = pre_data[pre_data['bare_nuclei'] != '?']
 
 x_train, x_test, y_train, y_test \
-    = train_test_split(data[features], data[target], test_size=0.3, random_state=42)
+    = train_test_split(data[features], data[target], test_size=0.2, random_state=42)
 
 clf = tree.DecisionTreeClassifier()
 
